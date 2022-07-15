@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--main-white);
+}
+
+:root {
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-white);
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav {
+    background-color: #be3144;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 13px 20px 0px rgb(0 0 0 / 40%);
+    z-index: 10;
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 2rem;
+}
+
+.nav-list li:hover {
+    background-color: rgb(35, 35, 152);
+    transition: background-color 0.5s ease;
+}
+
+.nav-list a {
+    font-size: 2.2rem;
+    padding: 2rem;
+    display: block;
+}
+
+.welcome-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+.welcome-section h1 {
+    font-size: 6rem;
+    color: var(--main-white)
+}
+
+.welcome-section p {
+    font-size: 3rem;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--main-red);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.project-section {
+    text-align: center;
+    background-color: var(--main-blue);
+    padding: 10rem 2rem;
+}
+
+.project-section-header {
+    border-bottom: 0.2rem solid var(--main-white);
+    margin: 0 auto 6rem auto;
+    max-width: 640px;
+}
+
+h2 {
+    font-size: 4.2rem;
+    color: var(--main-white);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+.project {
+    background: var(--main-gray);
+    border-radius: 2px;
+    box-shadow: 0px 0px 20px 3px rgb(0 0 0 / 50%);
+}
+
+
+.project-image {
+    width: 100%;
+    height: calc(100% - 7.8rem);
+    object-fit: cover;
+}
+
+.project-title {
+    font-size: 2rem;
+    padding: 2rem 0.5rem;
+}
+
+.code {
+    color: var(--main-gray);
+    transition: color 0.3s ease-in-out;
+}
+
+.project:hover .code {
+    color: #ff7f50;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.btn-show-all {
+    font-size: 2rem;
+    background-color: var(--main-gray);
+    transition: background-color 0.3s ease-out;
+}
+
+.btn-show-all:hover {
+    background-color: var(--main-red);
+}
+
+.btn-show-all > i {
+    margin-left: 10px;
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
+    font-size: 1.6rem;
+}
+
+.btn-show-all:hover > i {
+    transform: translateX(2px);
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--main-gray);
+    /* padding: 0 2rem; */
+    width: 100%;
+    height: 80vh;
+}
+
+.contact-section-header > h2 {
+    font-size: 6rem;
+}
+
+.contact-section-header > p {
+    font-style: italic;
+    color: white;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+}
+
+.contact-details {
+    font-size: 2.4rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover {
+    transform: translateY(8px);
+}
+
+footer {
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    background: var(--main-gray);
+    padding: 2rem;
+    border-top: 4px solid var(--main-red);
+}
+
+footer > p {
+    margin: 2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .contact-links {
+        max-width: 900px;
+    }
+}
